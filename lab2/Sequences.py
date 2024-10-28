@@ -96,13 +96,13 @@ def fibonacci_ratios(n):
         a, b =b, a+b
     return ratios
 
-##Testing with n=7
-n = 5 
+#Testing with n=10
+n = 10 
 
 fib_sequence_up_to_n = fibonacci_up_to_n(n)
-value_to_exceed = 5
+value_to_exceed = 10
 first_fib_exceeding_index = first_fib_exceeding(value_to_exceed)
-fib_check_value = 8
+fib_check_value = 21
 is_fib_number = is_fibonacci(fib_check_value)
 fib_ratios = fibonacci_ratios(n)
 
