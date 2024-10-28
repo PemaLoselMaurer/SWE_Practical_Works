@@ -1,24 +1,24 @@
 import collections
-#Open and Read txt file
+# Open and Read txt file
 def read_file(filename):
     with open("./sample.txt", 'r', encoding="utf-8") as file:
         return file.read()
 content = read_file('sample.txt')
 print(content) 
 
-#Counting Number of lines
+# Counting Number of lines
 def count_lines(content):
     return len(content.split('\n'))
 num_lines = count_lines(content)
 print(f"Number of lines: {num_lines}")
 
-#Counting Words
+# Counting Words
 def count_words(content):
     return len(content.split())
 num_words = count_words(content)
 print(f"Number of words: {num_words}")
 
-#Average Word Length
+# Average Word Length
 def average_word_length(content):
     words = content.split()
     total_length = sum(len(word) for word in words)
@@ -26,7 +26,7 @@ def average_word_length(content):
 avg_length = average_word_length(content)
 print(f"Average word length: {avg_length:.2f} characters")
 
-#Most Common Word
+# Most Common Word
 def most_common_word(content):
     words = content.lower().split() 
     word_counts = collections.Counter(words) 
@@ -57,14 +57,14 @@ text = "This is a sample text for testing. Modify the program to count the numbe
 unique_word_count = count_unique_words(text)
 print(f"Number of unique words: {unique_word_count}")
 
-# Find Longest word in text
+# Longest word in text
 def find_longest_word(text):
     words = text.split()
     longest_word = max(words, key=len)  
 longest_word = find_longest_word(text)
 print(f"Longest word: {longest_word}")
 
-# Counting the Occurance of specific word
+# the Occurance of specific word
 def count_word_occurrences(text, specific_word):
     words = text.lower().split() 
     specific_word = specific_word.lower()
@@ -72,7 +72,7 @@ def count_word_occurrences(text, specific_word):
 occurrences = count_word_occurrences(text, 'the')
 print(f"Occurrences of 'the': {occurrences}")
 
-#Calculate % of Words Longer than Average Length
+# % of Words Longer than Average Length
 def percentage_words_longer_than_average(text):
     words = text.split()
     word_lengths = [len(word) for word in words]
